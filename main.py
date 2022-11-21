@@ -77,19 +77,19 @@ plt.show()
 
 
 print('=====================MIN/MAX=====================')
+
 minx = min(X)
 maxx = max(X)
+print(minx)
+print(maxx)
+
 np.arange(minx, maxx, 0.1)
 plt.plot(X, y, 'b.')
 plt.title('Зависимость прибыльности от численности')
 plt.xlabel('Численность')
 plt.ylabel('Прибыльность')
 plt.grid()
-plt.plot(X, X_ones * theta, 'r-')
+plt.plot(X, X_ones * theta, 'g--')
 plt.plot(minx, theta[0] + theta[1] * minx, 'g--')
 plt.show()
 
-
-#
-# x = np.arange(minx, maxx, 0.1, dtype=float)
-# plt.plot(x, theta[1]*x+theta[0] , 'r-')
