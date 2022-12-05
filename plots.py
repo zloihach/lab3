@@ -2,7 +2,6 @@ import numpy as np
 from matplotlib import pyplot as plt
 import dataFunc as df
 
-
 def plotErrors(errors: np.ndarray):
     plt.plot(errors, 'b-')
     plt.title('Снижение ошибки')

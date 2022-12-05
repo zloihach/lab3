@@ -1,7 +1,6 @@
 # Загрузка данных из файла
 import numpy as np
 
-
 def loadData(file: str):
     data = np.matrix(np.
                      loadtxt(file, delimiter=','))

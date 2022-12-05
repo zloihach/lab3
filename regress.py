@@ -1,5 +1,4 @@
 import numpy as np
-
 import resultFunc as rf
 import dataFunc as df
 import plots as myplots

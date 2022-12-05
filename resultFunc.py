@@ -1,7 +1,6 @@
 # Функция предсказания
 import numpy as np
 
-
 def findResult(X_res: np.matrix,
                theta_res, data_norm=np.matrix([0])):
     if X_res.shape[1] >= theta_res.shape[0]:
