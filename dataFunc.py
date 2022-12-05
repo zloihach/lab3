@@ -3,7 +3,8 @@ import numpy as np
 
 
 def loadData(file: str):
-    data = np.matrix(np.loadtxt(file, delimiter=','))
+    data = np.matrix(np.
+                     loadtxt(file, delimiter=','))
     return data[:, 0:-1], data[:, -1]
 
 

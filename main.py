@@ -1,4 +1,3 @@
-import numpy as np
 from matplotlib import rc
 import regress as reg
 

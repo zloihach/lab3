@@ -21,7 +21,8 @@ def plotTask2():
     plt.show()
 
 
-def plotTask6(X: np.matrix, y: np.matrix, t: np.matrix):
+def plotTask6(X: np.matrix,
+              y: np.matrix, t: np.matrix):
     x = np.arange(min(X), max(X))
     plt.plot(X, y, 'b.')
     plt.plot(x, t[1, 0] * x + t[0, 0], 'g--')

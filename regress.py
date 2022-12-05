@@ -10,14 +10,9 @@ def oneRegress():
     myplots.plotTask2()
     X_ones = np.c_[np.ones((X.shape[0], 1)), X]
     theta = np.matrix('[1; 2]')
-    # print("Стоимость при 'theta' = [1,2]: {}".format(str(computeCost(X_ones, y, theta))))
     r, t = rf.gradient_descent(X_ones, y, 0.02, 500)
     print("'theta' найденная градиентным спуском: " + str(t).replace("\n", ""))
     myplots.plotErrors(r)
-    # print(
-    #     "Приблизительная прибыль при численности населения 8,5781: {}".format(str(findResult(np.matrix((8.5781)), t))))
-    # print(
-    #     "Приблизительная прибыль при численности населения 3.4567: {}".format(str(findResult(np.matrix((3.4567)), t))))
     myplots.plotTask6(X, y, t)
 
 def twoRegress():
@@ -35,14 +30,22 @@ def twoRegress():
     number_of_rooms2 = input("Введите количество комнат для второго рассчета: ")
 
     print(
-        "Приблезительная стоимость квартиры с площадью {} и {} комнатоай(ами): {} МНК и {} градиентный спуск".format(
+        "Приблезительная стоимость квартиры с площадью"
+        " {} и {} комнатоай(ами): {} МНК и {} градиентный спуск".format(
             str(quartile_area1),
             str(number_of_rooms1),
-            str(rf.findResult(np.matrix([quartile_area1, number_of_rooms1], dtype=np.float64), last)),
-            str(rf.findResult(np.matrix([quartile_area1, number_of_rooms1], dtype=np.float64), t2, norm))))
+            str(
+                rf.findResult(np.matrix([quartile_area1, number_of_rooms1],
+                                        dtype=np.float64), last)),
+            str(
+                rf.findResult(np.matrix([quartile_area1, number_of_rooms1],
+                                        dtype=np.float64), t2, norm))))
     print(
-        "Приблезительная стоимость квартиры с площадью {} и {} комнатой(ами): {} МНК и {} градиентный спуск".format(
+        "Приблезительная стоимость квартиры с площадью"
+        " {} и {} комнатой(ами): {} МНК и {} градиентный спуск".format(
             str(quartile_area2),
             str(number_of_rooms2),
-            str(rf.findResult(np.matrix([quartile_area2, number_of_rooms2], dtype=np.float64), last)),
-            str(rf.findResult(np.matrix([quartile_area2, number_of_rooms2], dtype=np.float64), t2, norm))))
+            str(rf.findResult(np.matrix([quartile_area2, number_of_rooms2],
+                                        dtype=np.float64), last)),
+            str(rf.findResult(np.matrix([quartile_area2, number_of_rooms2],
+                                        dtype=np.float64), t2, norm))))
